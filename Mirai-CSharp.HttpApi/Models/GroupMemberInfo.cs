@@ -44,15 +44,15 @@ namespace Mirai.CSharp.HttpApi.Models
         [JsonPropertyName("specialTitle")]
         abstract string? ISharedGroupMemberInfo.SpecialTitle { get; set; }
 
-        [JsonConverter(typeof(UnixTimeStampJsonConverter))]
+        [JsonConverter(typeof(UnixTimeNullableStampJsonConverter))]
         [JsonPropertyName("joinTimestamp")]
         abstract DateTime? ISharedGroupMemberInfo.JoinTime { get; set; }
 
-        [JsonConverter(typeof(UnixTimeStampJsonConverter))]
+        [JsonConverter(typeof(UnixTimeNullableStampJsonConverter))]
         [JsonPropertyName("lastSpeakTimestamp")]
         abstract DateTime? ISharedGroupMemberInfo.LastSpeakTime { get; set; }
 
-        [JsonConverter(typeof(TimeSpanSecondsConverter))]
+        [JsonConverter(typeof(TimeSpanNullableSecondsConverter))]
         [JsonPropertyName("muteTimeRemaining")]
         abstract TimeSpan? ISharedGroupMemberInfo.MuteTimeRemaining { get; set; }
 #endif
@@ -85,17 +85,17 @@ namespace Mirai.CSharp.HttpApi.Models
         public string? SpecialTitle { get; set; }
 
         /// <inheritdoc/>
-        [JsonConverter(typeof(UnixTimeStampJsonConverter))]
+        [JsonConverter(typeof(UnixTimeNullableStampJsonConverter))]
         [JsonPropertyName("joinTimestamp")]
         public DateTime? JoinTime { get; set; }
 
         /// <inheritdoc/>
-        [JsonConverter(typeof(UnixTimeStampJsonConverter))]
+        [JsonConverter(typeof(UnixTimeNullableStampJsonConverter))]
         [JsonPropertyName("lastSpeakTimestamp")]
         public DateTime? LastSpeakTime { get; set; }
 
         /// <inheritdoc/>
-        [JsonConverter(typeof(TimeSpanSecondsConverter))]
+        [JsonConverter(typeof(TimeSpanNullableSecondsConverter))]
         [JsonPropertyName("muteTimeRemaining")]
         public TimeSpan? MuteTimeRemaining { get; set; }
 
